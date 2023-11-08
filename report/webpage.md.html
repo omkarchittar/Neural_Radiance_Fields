@@ -1,0 +1,58 @@
+<meta charset="utf-8" emacsmode="-*- markdown -*">
+**NeRF**
+
+Name: Omkar Chittar
+
+
+Differentiable Volume Rendering
+===============================================================================
+
+__1.3. Ray Sampling__
+
+ Grid | Rays
+------------------------|---------------------
+![](xygrid.png) | ![](raybundle.png)
+
+__1.4. Point Sampling__
+
+| Sampled Points | 
+|-------------------------|
+| ![](sample_points.png) | 
+
+__1.5. Volume Rendering__
+
+Rendered Box with color | Depth Image
+------------------------|---------------------
+![](part_1.gif) | ![](depth.png)
+
+Optimizing a basic implicit volume
+===============================================================================
+
+__2.3. Visualization__
+
+```
+Center = (0.25, 0.25, 0.00)
+length of sides = (2.00, 1.50, 1.50)
+```
+| Optimized Volume | 
+|-------------------------|
+| ![](part_2.gif) | 
+
+Optimizing a Neural Radiance Field (NeRF)
+===============================================================================
+Hyperparameters were kept the same.
+
+Included harmonic embeddings into the architecture.
+```
+n_layers_xyz: 6
+n_hidden_neurons_xyz: 128
+n_hidden_neurons_dir: 64
+append_xyz: [3]
+```
+| Optimized NeRF | 
+|-------------------------|
+| ![](part_3.gif) |
+
+
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js" charset="utf-8"></script><script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js?" charset="utf-8"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
+
